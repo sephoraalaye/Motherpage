@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100%;
+    background:aliceblue;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.bubbles span{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #4fc3dc;
+    margin: 0px 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(100s/var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.contain{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,0 0 50px #ff2d75,0 0 100px #ff2d75;
+}
+
+.corps{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 2%;
+    left: 1%;
+    min-width: 100%;
+    height: auto;
+    gap: 2%;
+}
+
+.corps .bloc{
+    border: #32a1ce solid 1px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.premier{
+    display: flex;
+    justify-content: center;
+    background-color:transparent;
+}
+
+.bloc img{
+    object-fit:fill;
+    border-radius: 20px;
+    
+}
+
+.second p{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.second{
+    background-color:antiquewhite;
+    padding: 40px;
+    font-size: 1.2rem;
+    font-family: "Pacifico", cursive;
+    font-style: normal;   
+}
+
+ul li{
+    list-style-type:circle;
+}
+
+.happy{
+    text-align: end;  
+    padding-right: 5%;
+}
+
+/* Extra small devices (phones, 600 px and down)*/
+@media only screen and (max-width: 600px){
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600 px and up)*/
+@media only screen and (min-width: 600px){
+
+}
+
+/* Medium devices (landscape tablets, 768 px and up)*/
+@media only screen and (max-width: 768px){
+    .corps{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corps .bloc{
+        
+        width: 90%;
+    }
+
+    .second{
+        position: absolute;
+        background: transparent;
+    }
+}
+
+/* Large devices (laptops/deskops, 992 px and up)*/
+@media only screen and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops/deskops, 1200 px and up)*/
+@media only screen and (min-width:1200px){
+
+}
